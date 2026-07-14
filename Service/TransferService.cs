@@ -19,13 +19,13 @@ namespace LocalTransfer.Service
             }
         }
 
-        public TransferHistory StartTransfer(string sessionId,string sender,string receiver,string fileName,long fileSize,string fileType)
+        public TransferHistory StartTransfer(string sender,string receiver,string fileName,long fileSize,string fileType)
         {
             var history = LoadHistory();
             var transfer = new TransferHistory
             {
                 TransferId = Guid.NewGuid().ToString(),
-                SessionId = sessionId,
+                
                 SenderDevice = sender,
                 ReceiverDevice = receiver,
                 FileName = fileName,

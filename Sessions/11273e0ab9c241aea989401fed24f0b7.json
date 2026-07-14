@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "success": true,
+  "error": "",
+  "sessionId": "11273e0ab9c241aea989401fed24f0b7",
+  "token": "d9599d289944407db43ba4af2c67723b",
+  "connectionState": "WaitingForScanner",
+  "scheme": "https",
+  "host": "192.168.40.53",
+  "port": 7154,
+  "baseUrl": "https://192.168.40.53:7154",
+  "api": {
+    "connect": "/api/pair/connect",
+    "heartbeat": "/api/pair/heartbeat",
+    "disconnect": "/api/pair/disconnect",
+    "upload": "/api/file/upload",
+    "download": "/api/file/download",
+    "discover": "/api/device/discover"
+  },
+  "device": {
+    "id": "HW00920",
+    "name": "HW00920",
+    "host": "HW00920",
+    "ip": "192.168.40.53",
+    "network": "Ethernet",
+    "os": "Win32NT",
+    "osVersion": "Microsoft Windows NT 10.0.26100.0"
+  },
+  "expires": "2026-07-14T10:37:40.6235665Z",
+  "generated": "2026-07-14T10:32:40.623568Z"
+}

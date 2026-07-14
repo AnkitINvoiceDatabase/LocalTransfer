@@ -17,9 +17,9 @@ namespace LocalTransfer.Controllers
         }
 
         [HttpPost("start")]
-        public IActionResult Start(  string sessionId, string sender, string receiver, string fileName, long fileSize, string fileType)
+        public IActionResult Start(   string sender, string receiver, string fileName, long fileSize, string fileType)
         {
-            var result = _transfer.StartTransfer( sessionId, sender, receiver, fileName,  fileSize, fileType);
+            var result = _transfer.StartTransfer(  sender, receiver, fileName,  fileSize, fileType);
             return Ok(result);
         }
 

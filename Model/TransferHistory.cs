@@ -4,7 +4,7 @@
     {
         public string TransferId { get; set; } = Guid.NewGuid().ToString();
 
-        public string SessionId { get; set; } = "";
+        
 
         public string SenderDevice { get; set; } = "";
 
