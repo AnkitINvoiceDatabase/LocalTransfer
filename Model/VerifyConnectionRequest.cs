@@ -4,9 +4,9 @@ namespace LocalTransfer.Model
 {
     public class VerifyConnectionRequest
     {
-        // Pairing Session Id
+        // QR se milne wala Token
         [Required]
-        public string SessionId { get; set; } = string.Empty;
+        public string Token { get; set; } = string.Empty;
 
         // Unique Device Id
         [Required]
