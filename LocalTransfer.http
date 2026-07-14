@@ -1,0 +1,6 @@
+@LocalTransfer_HostAddress = http://localhost:5216
+
+GET {{LocalTransfer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
