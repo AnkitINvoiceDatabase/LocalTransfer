@@ -15,7 +15,6 @@ namespace LocalTransfer.Controllers
         {
             _connectionService = connectionService;
         }
-
         /// <summary>
         /// Verify device connection
         /// </summary>
@@ -29,7 +28,6 @@ namespace LocalTransfer.Controllers
                 return BadRequest(result);
             return Ok(result);
         }
-
         /// <summary>
         /// Get connection status
         /// </summary>
@@ -46,7 +44,6 @@ namespace LocalTransfer.Controllers
 
             return Ok(result);
         }
-
         /// <summary>
         /// Heartbeat
         /// </summary>
@@ -72,7 +69,6 @@ namespace LocalTransfer.Controllers
                 Time = DateTime.Now
             });
         }
-
         /// <summary>
         /// Disconnect device
         /// </summary>
@@ -97,7 +93,6 @@ namespace LocalTransfer.Controllers
                 Message = "Device disconnected successfully."
             });
         }
-
         /// <summary>
         /// Get all connected devices
         /// </summary>

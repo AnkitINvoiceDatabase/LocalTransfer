@@ -16,30 +16,10 @@ namespace LocalTransfer.Service
 
         public ConnectionResponse VerifyConnection(VerifyConnectionRequest request)
         {
-            if (string.IsNullOrWhiteSpace(request.SessionId))
-            {
-                return new ConnectionResponse
-                {
-                    Success = false,
-                    Connected = false,
-                    Message = "Session Id is required."
-                };
-            }
-
-            // Same Session already connected
-            if (_sessions.ContainsKey(request.SessionId))
-            {
-                return new ConnectionResponse
-                {
-                    Success = true,
-                    Connected = true,
-                    Message = "Already Connected."
-                };
-            }
-
+         
             var session = new ConnectionSession
             {
-                SessionId = request.SessionId,
+          
                 DeviceId = request.DeviceId,
                 DeviceName = request.DeviceName,
                 DeviceType = request.DeviceType,
