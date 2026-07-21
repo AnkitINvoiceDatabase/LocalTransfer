@@ -18,14 +18,39 @@ namespace LocalTransfer.Controllers
         /// <summary>
         /// Verify device connection
         /// </summary>
+        //[HttpPost("verify")]
+        //public IActionResult Verify([FromBody] VerifyConnectionRequest request)
+        //{
+        //    if (!ModelState.IsValid)
+        //        return BadRequest(ModelState);
+        //    var result = _connectionService.VerifyConnection(request);
+        //    if (!result.Success)
+        //        return BadRequest(result);
+        //    return Ok(result);
+        //}
         [HttpPost("verify")]
         public IActionResult Verify([FromBody] VerifyConnectionRequest request)
         {
+            if (request == null)
+            {
+                return BadRequest(new
+                {
+                    Success = false,
+                    Message = "Request is required."
+                });
+            }
+
             if (!ModelState.IsValid)
+            {
                 return BadRequest(ModelState);
+            }
+
             var result = _connectionService.VerifyConnection(request);
+
             if (!result.Success)
+            {
                 return BadRequest(result);
+            }
             return Ok(result);
         }
         /// <summary>

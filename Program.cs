@@ -35,7 +35,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Pair}/{action=generate}");
+    pattern: "{controller=Scan}/{action=index}");
 
 
 app.MapControllers();
